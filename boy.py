@@ -152,7 +152,7 @@ class Boy:
 
     def draw(self):
         self.state_machine.draw()
-        draw_rectangle(*self.get_bb(),0,120,255,255)
+        # draw_rectangle(*self.get_bb(),0,120,255,255)
 
     # fill here
     def get_bb(self):

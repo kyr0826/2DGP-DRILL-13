@@ -14,7 +14,7 @@ class Ball:
     def draw(self):
         sx, sy = self.x - common.court.window_left, self.y - common.court.window_bottom
         Ball.Image.draw(sx, sy)
-        draw_rectangle(*self.get_bb(),255,0,125,255)
+        # draw_rectangle(*self.get_bb(),255,0,125,255)
 
     def get_bb(self):
         sx, sy = self.x - common.court.window_left, self.y - common.court.window_bottom
