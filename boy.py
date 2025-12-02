@@ -52,7 +52,7 @@ class Idle:
         # Removed timeout trigger for sleep.
 
     def draw(self):
-        sx, sy = get_canvas_width() // 2, get_canvas_height() // 2
+        sx, sy = self.boy.x - common.court.window_left, self.boy.y - common.court.window_bottom
         self.boy.font.draw(sx - 100, sy + 60, f'{self.boy.x:5.5}, {self.boy.y:5.5}', (255, 255, 0))
 
         if self.boy.face_dir == 1:  # right
@@ -78,7 +78,7 @@ class Run:
         self.boy.y += self.boy.ydir * RUN_SPEED_PPS * game_framework.frame_time
 
     def draw(self):
-        sx, sy = get_canvas_width() // 2, get_canvas_height() // 2
+        sx, sy = self.boy.x - common.court.window_left, self.boy.y - common.court.window_bottom
         self.boy.font.draw(sx - 100, sy + 60, f'{self.boy.x:5.5}, {self.boy.y:5.5}', (255, 255, 0))
 
         if self.boy.xdir == 0:  # 위 아래로 움직이는 경우
