@@ -161,4 +161,6 @@ class Boy:
 
     def handle_collision(self, group, other):
         if group == 'Boy:Ball':
+            game_world.remove_collision_object(other)
+            game_world.remove_object(other)
             print('collision ball')
