@@ -152,10 +152,13 @@ class Boy:
 
     def draw(self):
         self.state_machine.draw()
+        draw_rectangle(*self.get_bb(),0,120,255,255)
 
     # fill here
     def get_bb(self):
-        return self.x - 20, self.y - 50, self.x + 20, self.y + 50
+        sx, sy = self.x - common.court.window_left, self.y - common.court.window_bottom
+        return sx - 20, sy - 50, sx + 20, sy + 50
 
     def handle_collision(self, group, other):
-        pass
+        if group == 'Boy:Ball':
+            print('collision ball')
